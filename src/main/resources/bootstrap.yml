@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ui_test
+
+  cloud:
+    config:
+      discovery:
+        service-id: CONFIG_SERVER
+    discovery:
+      client:
+        simple:
+          local:
+            uri: localhost:8761
+
