@@ -6,9 +6,8 @@ spring:
     config:
       discovery:
         service-id: CONFIG_SERVER
-    discovery:
-      client:
-        simple:
-          local:
-            uri: localhost:8761
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${PEER1}:8761/eureka/,http://${PEER2}:8762/eureka/,http://${PEER3}:8763/eureka/
